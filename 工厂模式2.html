@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	function CreatePerson(name,sex)
+	{
+		//var obj=new Object();
+		this.name=name;
+		this.sex=sex;
+
+		/*this.showName=function()
+		{
+			alert("我的名字叫:"+this.name);
+		};*/
+		/*this.showSex=function()
+		{
+			alert("我是:"+this.sex+"的");
+		};*/
+
+		//return this;
+	}
+
+	CreatePerson.prototype.showName=function()
+	{
+		alert('我的名字叫：'+this.name);
+	}
+	CreatePerson.prototype.showSex=function()
+	{
+		alert("我是:"+this.sex+"的");
+	};
+
+	var p1= new CreatePerson('blue','男');
+	var p2= new CreatePerson('leo','女');
+	p1.showName();
+	p1.showSex();
+	p2.showName();
+	p2.showSex();
+
+	alert(p1.showName==p2.showName)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

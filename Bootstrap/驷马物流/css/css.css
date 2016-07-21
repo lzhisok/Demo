@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:12px;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;border:none; background:none;}
+textarea{resize:none;}
+a{text-decoration:none; color:#656565;}
+
+/*清浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/* top */
+.comWidth{width: 1000px;margin: 0 auto}
+.top{width: 100%;height: 100px;}
+.top_left{line-height: 100px;}
+.top_right dl{float: left;margin: 10px 10px 0px;}
+.top_right dl dd{text-align: center;color:#9FA0A5;}
+/* nav_main */
+.nav_main{width: 100%;background-color: #3d3b60;}
+.nav_top{width: 930px;margin: 0 auto;}
+.nav-pills a{border-radius: 0 !important;}
+/*.nav-pills>li+li {margin-left: 0px;}*/
+.nav-pills>li.active>a{background-color:#DB2228 ;}
+.nav-pills>li>a{height: 40px;font-size: 16px;color:#ccc;}
+.nav-pills>li>a:hover,.nav-pills>li>a:visited,.nav-pills>li>a:active{color: #000;}
+/* nav_middle */
+.nav_middle{width:1000px;margin: 20px auto 5px;background-color: #3d3b60;}
+/* middle_search */
+.middle_search{width: 1000px;margin: 15px auto;}
+.middle_search .btn{width: 100px;background-color: #FF5001}
+/* middle_tab */
+.middle_tab{width: 1000px;margin: 0 auto}
+.table thead th{background:#C4C4D0;text-align: center;}
+.table tr{background-color: #E8E7ED;}
+.table td{text-align: center;}
+.table tbody tr td{height: 40px;line-height: 40px;}
+.table tbody tr td button{width:100px;padding:0;background-color: #FF5001;border-radius: 15px}
+/* middle_news */
+.middle_news{width: 1000px;margin:0 auto;}
+/* 物流动态 */
+.dynamic_top{width: 100%;height:25px;line-height:25px;background-color: #3D3B60;color: #fff;font-size:13px;padding-left: 5px;margin-bottom: 10px;}
+.dynamic_content ul {list-style: none;padding-left: 10px;}
+.dynamic_content ul li{line-height: 24px;}
+.dynamic_content ul li a{text-decoration: none;color: #070707}
+/* 客户服务 */
+.customer_service{border-bottom: 2px solid #939298;padding:0px 0px 0px 30px;height: 25px;line-height: 25px;font-weight: bold;}
+.timetable, .service ,.problem{margin-top: 8px;margin-bottom: 8px;}
+.timetable,.service ,.problem span{color: #DB7A2D;padding-left: 5px;}
+.timetable a{color: #070707;text-decoration: none;}
+.service a{color: #070707;text-decoration: none;}
+.problem a{color: #070707;text-decoration: none;}
+/* 物流动态 */
+.latest_activity{height: 25px;line-height:25px;background: #3D3B60;padding: 0px 30px 0px;color: #fff}
+.activity_list ol{padding-left: 30px;}
+.activity_list ol li{line-height: 25px;list-style: decimal}
+.activity_list ol li a{text-decoration: none;color: #070707;}
+/* 物流步骤 */
+.middle_step{width: 1000px;margin: 40px auto;}
+.middle_step .row .col-xs-2{padding-right: 0px;}
+.middle_step .row .col-xs-2 a{margin: 0 10px 0 25px;color: #9FA0A5}
+/* 中部综合 */
+.middle_comprehensive{width: 1000px;margin: 0 auto;}
+.course,.download{width:100%;height:30px;line-height:30px;border-bottom: 2px solid #807E8B;font-weight: bold;}
+.course_list ul{line-height: 25px;padding-left: 20px;color:#464646;}
+.course_list ul li{list-style: disc;}
+.download_app img{float: left;}
+.download_app div{height:100px;float:left;position: relative;top: 40px;left: 20px;font-size: 15px;}
+.download_weixin img{float: left;}
+.download_weixin div{float:left;position: relative;top: 40px;left: 20px;font-size: 15px;}
+/* 尾部 */
+.footer{ background:url(../images/bottom_background.png) no-repeat center; width:100%; height:300px;text-align: center;margin-top: 50px; }
+.footer i{font-style:normal; margin:0 30px; color:#807E89;}
+.footer a{color:#807E89;}
+.footer a:hover{color:#F60;text-decoration: none;}
+.footer_logo{padding-top: 130px;font-size: 20px;color: #FFFFFF;}
+.footer_link {margin-top: 50px;font-size: 14px;}
+.footer_tel{margin-top: 30px;color:#807E89;font-size: 15px;}
+.footer_tel span{font-size: 20px;}

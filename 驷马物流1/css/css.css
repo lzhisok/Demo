@@ -1,0 +1,61 @@
+
+body{width:100%;font-size: 12px;line-height: 50%;font-family:Arial, Helvetica, sans-serif,宋体;margin:0px; padding:0px;color:#000000;background-color:#ffffff;}
+.top{width: 100%}
+.top1{height: 100px;width: 100%;margin-bottom:0px;}
+.top1_left{float: left;width: 50%;height: inherit;}
+.top1_left img{top: 30px;left: 35%;position: relative;}
+.top1_right{float: left;width:50%;height: inherit;}
+.top1_right dl{position: relative;float: left;}
+.top1_right dt{margin-top: 7px;margin-left: 11px;}
+.top1_right dd{margin-left:30px;color: #9FA0A5;}
+.top2{height: 50px;background:#34344e; width: 100%;font-size: 21px;color: #ccc;padding-top: 0px;}
+.top2 ul{list-style: none;left: 270px;position: relative;}
+.top2 ul li{float: left;width: 130px;text-align: center;}
+.top2 ul li a:hover{background-color:#DB2228;height: 49px;}
+.top2 ul li a{text-decoration: none;display: block;height: 45px;line-height: 45px;width: 100px;color:#E2E1F3 }
+/*.navigation ul li a.on{background-color:#DB2228;height: 49px;}*/
+.navigation_middle{width: 60%;background: #3d3b60;height: 40px;margin: 20 auto 20 auto;text-align: left;color: #ccc;font-size: 15px}
+.navigation_middle ul{list-style: none;padding-left: 0px;float: left;}
+.navigation_middle ul li{float: left;width: 100px;text-align: center;height: 30px;}
+.navigation_middle ul li a{color: #ccc;text-decoration: none;display:block;height: 40px;display: block;}
+.navigation_middle ul li a:hover{background-color: #DB2228;height: 40px;}
+.search{width: 100%;position: relative;top: 0px;left: 280px;color: #63616C}
+.search img{vertical-align: middle;}
+.search input{border:2px solid #9FA0A5;margin-right: 10px;height: 25px;}
+.search button{background: #FF5001; width: 100px;color:#ccc;height: 32px;cursor: pointer; }
+#tab1{margin: 20px auto; text-align: center;border-collapse: collapse;color: #666}
+#tab1 thead th{padding: 4px 8px;border:1px solid #C4C4D0;height: 20px;}
+#tab1 thead{background-color:#C4C4D0}
+#tab1 td{padding: 4px 8px;border:1px solid #E8E7ED;height: 40px;background-color: #E8E7ED}
+#tab1 td button{background-color:#FF5001; color: #ccc;width: 80px;border-radius:15px;cursor: pointer;}
+.carousel{width: 330px;height:310px;position: relative;left: 270px;overflow: hidden;float: left;}
+.list img{width: 330px;height: 310px;float: left;}
+.list{width: 1650px;height:300px;position: absolute;z-index:1;}
+#round{ position: absolute; height: 10px; width: 100px; z-index: 2; bottom: 20px; left: 230px;}
+#round span { cursor: pointer; float: left; border: 1px solid #fff; width: 13px; height: 13px; border-radius: 50%; background: #fff; margin-right: 5px;padding-top: 3px;padding-left: 2px;}
+#round .on{  background: #DB2228;}
+.dynamic{width: 140px;height:300px;position:relative;float: left;margin-left:21%; }
+.dynamic_top{width: 210px;height:17px;background-color: #3D3B60;color: #fff;font-size:13px;padding-top: 10px;padding-left: 5px;}
+.dynamic_content{width: 210px;float: left;}
+.dynamic_content ul {list-style: none;padding-left: 10px;}
+.dynamic_content ul li{line-height: 25px;}
+.dynamic_content ul li a{text-decoration: none;color: #070707}
+.comprehensive{width: 230px;height:300px;position:relative;float: left;margin-left:7%;}
+.customer_service{border-bottom: 2px solid #939298;padding:8px 0px 13px 30px;}
+.timetable, .service ,.problem{margin-top: 10px;margin-bottom: 20px;}
+.timetable,.service ,.problem span{color: #DB7A2D;padding-left: 5px;}
+.timetable a{color: #070707;text-decoration: none;}
+.service a{color: #070707;text-decoration: none;}
+.problem a{color: #070707;text-decoration: none;}
+.latest_activity{height: 17px;background: #3D3B60;padding: 10px 0px 1px 30px;color: #fff}
+.activity_list ul{list-style: none;padding-left: 15px;}
+.activity_list ul li{line-height: 25px;}
+.activity_list ul li a{text-decoration: none;color: #070707;}
+.step{width: 60%;height:60px;top: 30px;left:270px;position: relative;font-size: 13px;float: left;clear: both;color: #BDBDBD}
+.step img{vertical-align: middle;margin: 7px;}
+.step a{text-decoration: none;color: #BDBDBD; }
+.bottom1{width: 60%;height: 100px;position: relative;top: 70px;left: 270px;float: left;}
+.introduction{width: 150px;float: left;}
+#course{width:160px;height:20px;border-bottom: 2px solid #807E8B}
+#course_list ul{line-height: 25px;padding-left: 0px;color:#464646}
+.download{position:relative;float:left;left:70px;width: 73%;height: 20px;border-bottom: 2px solid #807E8B}

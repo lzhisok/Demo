@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>focus和blur</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("input").bind("focus",function(){
+			$("div").html("请输入您的姓名!");
+		});
+		$("input").bind("blur",function(){
+			$("div").html("您的名称不能为空！");
+		});
+	})
+	</script>
+</head>
+<body>
+    <input id="txt1"/>
+    <div></div>
+</body>
+</html>

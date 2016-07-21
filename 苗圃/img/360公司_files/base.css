@@ -1,0 +1,105 @@
+body {background-color: #fff;font-family:"Microsoft Yahei",arial;font-size: 14px;color: #4c4c4c;}
+ol,ul,dl {list-style: none;margin: 0;}
+.no-padding-left {padding-left: 0;}
+.no-padding-right {padding-right:0}
+.no-padding-all {padding: 0;}
+a{color: #4c4c4c;text-decoration: none;}
+a:hover {text-decoration: none;color: #4c4c4c;}
+.zwimg{ width: 0px;height: 100%;float: left;}
+.lastdiv {clear: both;}
+.f-color2 {color: #333;}
+
+/*登录*/
+.loginbox {border-radius: 5px;	border: 1px solid #D0D0D0; box-shadow: 0 0 8px #D0D0D0;	width: 350px; height: 358px; padding: 5px;}
+.loginbox >.topbiaoti {margin-top: 25px;font-size: 16px;}
+.loginbox .dlsrbox {margin-top: 20px;}
+.loginbox .dlsrbox * {height: 44px;border-color: #b3b3b3;}
+.loginbox .dlsrbox img {width:22px;height: 22px ;}
+.btn-jkl {background-color: #1bb0db;line-height: 22px;margin-top: 15px;color: #fff;outline: none;border-radius: 3px;outline: none;}
+.btn-jkl:hover{color: #fff;background-color: #0E94BB;}
+.btn-jkl:active {color: #fff;outline: none;;}
+.loginbox >.cjwt {margin-top: 20px;}
+.loginbox >.cjwt span {color: #808080;}
+.loginbox >.cjwt span:hover {color: #4c4c4c;}
+/*登录-外*/
+.loginbox >.logo {position: absolute; top:-80px;}
+.copyright {color: #d7d7d7;}
+
+/*导航*/
+nav {min-width: 1080px;height: 58px;background-color: #1bb0db;}
+nav .logobox {width: 200px;height:58px;background-color:#FFFFFF;float:left;padding-left: 0px;}
+nav .logobox img {margin-top: 5px;max-height:52px; max-width:160px;}
+nav .tsbox {float: left;font-size: 18px;color: #fff;line-height: 54px;padding-left: 15px;}
+
+nav .rightlm {float: right;height: 58px;}
+nav .rightlm li {float:right;width: 120px;border-left: 1px solid #0599c3;}
+nav .rightlm  span {margin-left:4px;color: #fff;line-height: 58px;}
+
+/*考试须知*/
+.ksxz {width: 800px;margin-left: auto;margin-right: auto; }
+.ksjs {background-color: #fff;  border: 1px solid rgb(199, 199, 199); height: 44px;width: 100%;margin-top: 20px;padding-left: 0; }
+.ksjs li {float: left;margin-left: 20px;color:333333;line-height: 44px;}
+
+.ksxz .ksxz-text {margin-top: 15px;min-height: 360px;background-color: #fff;border:1px solid rgb(199, 199, 199);}
+.ksxz .ksxz-text p {padding: 2px 15px; line-height:24px; }
+.ksxz > div >.next {width: 60px;margin-top: 20px;outline: none;}
+
+/*拍照*/
+.photo {width:1080px;margin-left:auto;margin-right:auto;background-color:#fff;min-height: 540px;margin-top: 15px;}
+.photo .min {width: 940px;margin-left: auto;margin-right: auto;padding-top: 20px;padding-bottom: 30px;}
+
+.photo .photobox {width:420px;height: 360px;background-color: #e4e3e3;}
+.photo .min .leftphoto {float:left;width:470px;background-color: #fff;margin-top: 20px;}
+.photo .min .buttonbox {width: 420px;padding-top:15px;}
+.photo .min .buttonbox >.pzbtn {line-height: 20px;width: 100px;}
+.photo .min >.tishi {padding-top: 20px;line-height: 30px;}
+.xybbtn {width: 280px;margin-top: 20px;}
+
+/*考试列表*/
+.ksxz .testlist {background-color: #fff;border: 1px solid  rgb(199, 199, 199);margin-top: 20px;padding-bottom: 20px;min-height: 260px;}
+.ksxz .testlist dt div {float: left; text-align:center;font-weight: normal;color:#333;line-height: 40px;}
+.ksxz .testlist dt {background-color: #e4e4e4;height: 40px;}
+.ksxz .testlist dd {background-color: #fff;height: 40px;border-bottom: 1px solid #e6e6e6;}
+.ksxz .testlist dd .start {width: 82px;line-height: 14px;background-color: #FE9A11;color: #fff;outline: none;border:1px solid #f68344}
+.ksxz .testlist dd div {float: left; text-align:center;font-weight: normal;color:#333;line-height: 40px;}
+
+/*单选题*/
+.singletest {width: 800px;margin-left: auto;margin-right: auto;margin-top: 15px;background-color: #fff}
+.singletest >.tophead {background-color: #fff;border: 1px solid  rgb(199, 199, 199);height:40px;padding: 0px 15px;}
+.singletest >.tophead span {color: #333333;line-height: 40px;}
+.singletest .tm {padding: 15px 0px;}
+.singletest .tm .tg {padding: 12px 15px;min-height:150px; font-weight: bold; background-color: rgba(225,241,247,0.4);border: 1px solid #cbecf6;color: #333;line-height: 28px; border-radius: 0px;}
+
+.singletest .tm dl {margin-top: 10px;}
+.singletest .tm dl dd {margin-top: 15px;width: 800px;min-height: 50px;background-color:#fff;border:1px solid #f0f0f0;border-radius: 3px;padding:15px;padding-left: 50px;font-weight: normal;position: relative;display: table-cell;vertical-align: middle;}
+
+.singletest .tm dl dd .cko{visibility: hidden;}
+.singletest .tm dl dd .fxk {position: absolute;width: 14px;height: 14px;margin-top: -7px;left: 15px;top: 50%;}
+
+.singletest .tm dl label:hover dd{background-color:rgba(237,249,253,0.4);border: 1px solid rgba(27,176,219,0.6); }
+
+
+
+.singletest .anniuzu {margin-top:0px; margin-bottom:20px;}
+.anniuleft {float: left;  width:80px;}
+.anniuright{float: right;  width:80px;}
+
+/*代码考试界面*/
+.dmbigbox {min-width: 1080px;}
+/*左边*/
+.daimaleft {width:35%;float: left;height: 100%;background-color: #ffffff;overflow-y: auto;}
+.daimaleft .lefttm {float:left;margin:0px 0px 20px 15px;padding-right: 15px;}
+.daimaleft .shuruin {background-color: #f5f5f5;margin-top: 15px;padding: 5px;}
+.daimaleft .tg>div{background-color: rgba(225,241,247,0.4);border: 1px solid #ccedf7;line-height: 28px;padding:5px;}
+/*拖拽条*/
+.tuozhuai {width:2%;float:left;height:100%;background-color: #f2f2f2;width: 4px;position: relative;}
+.tuozhuai >.aninu {top: 50%;height: 20px;width: 20px;position: absolute;margin-top: -39px;left: 50%;margin-left: -10px;background-image: url(../img/jt-left.png);cursor: pointer;}
+.tuozhuai >.aninu-2 {top: 50%;height: 20px;width: 20px;position: absolute;margin-top: -39px;left: 50%;margin-left: -10px;display: none;background-image: url(../img/jt-right.png);cursor: pointer;}
+/*右边*/
+.daimaright {width: 63%;float: left;height: 100%;background-color: #fff;padding-left: 15px; }
+.daimaright .xiala {width: 110px;  padding-top: 0px;margin-top: 5px;}
+.daimaright .biancheng {width:100%;background-color: #fff;border: 1px solid #d8d8d8;}
+/*编程的按钮*/
+.daimaright .jieguo {width:100%;border: 1px solid #d8d8d8;}
+
+

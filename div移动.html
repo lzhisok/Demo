@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1{width:100px; height:100px; background:red;position:absolute;left:0px; top:50px;}
+</style>
+<script>
+var timer=null;
+function startMove(){
+	var oDiv=document.getElementById("div1");
+	clearInterval(timer);
+	timer=setInterval(function(){
+		var iSpeed=1;
+		
+		if(oDiv.offsetLeft>=1306)
+		{
+			clearInterval(timer);
+		}
+		else{
+			oDiv.style.left=oDiv.offsetLeft+iSpeed+"px";
+		}
+	},30)
+}
+</script>
+</head>
+
+<body>
+<button onClick="startMove()">开始运动</button>
+<div id="div1"></div>
+</body>
+</html>

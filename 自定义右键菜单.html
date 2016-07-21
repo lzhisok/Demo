@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ padding:0px; margin:0px}
+#ul1{width:100px; background:#CCCCCC; border:1px solid balck; position:absolute; display:none}
+</style>
+<script>
+document.oncontextmenu=function(){
+	var Oul=document.getElementById("ul1");
+	
+	Oul.style.display="block";
+	Oul.style.left=event.clientX+"px";
+	Oul.style.top=event.clientY+"px";
+	
+	return false;
+	
+
+};
+document.onclick=function(){
+    var Oul=document.getElementById("ul1");
+	Oul.style.display="none"
+}
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+<li>登陆</li>
+<li>注销</li>
+<li>返回首页</li> 
+<li>加入VIP</li>
+</ul>
+</body>
+</html>

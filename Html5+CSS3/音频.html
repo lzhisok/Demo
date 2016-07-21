@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+    <button onclick="clickA()">播放/暂停</button>
+	<audio src="1.mp3" controls="controls" id="audio">您的浏览器不支持</audio>
+	<script type="text/javascript">
+	var a=document.getElementById("audio");
+	function clickA()
+	{
+       if(a.paused)
+       {
+       	a.play();
+       }
+       else
+       {
+       	a.pause();
+       }
+	}
+</script>
+
+</body>
+</html>

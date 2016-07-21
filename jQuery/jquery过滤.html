@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//$("div p").first().css("background","red");
+		//$("div p").last().css("background","red");
+		//$("div p").eq(0).css("background","red");
+		//$("div p").filter("p").css("background","red");
+		$("div p").not(".pclass").css("background","red");
+	})
+	</script>
+	<style type="text/css"></style>
+</head>
+<body>
+	<div>
+		<p>div1</p>
+	</div>
+	<div>
+		<p class="pclass">div2</p>
+	</div>
+	<div>
+		<p class="pclass">div3</p>
+	</div>
+	<div>
+		<p>div4</p>
+	</div>
+</body>
+</html>

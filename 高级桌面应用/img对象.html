@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+
+<script type="text/javascript">
+window.onload=function()
+{
+	var oImg=new Image();
+
+	oImg.onload=function()
+	{
+		alert("图片加载成功");
+	};
+	oImg.onerror=function()
+	{
+		alert("图片加载失败");
+	};
+
+	oImg.src="http://img0.bdstatic.com/img/image/shouye/touxiang1127.jpg";
+}
+
+</script>
+</head>
+<body>
+	<img width="160px" height="140px" src="http://img0.bdstatic.com/img/image/shouye/sheying1127.jpg" onmouseover="this.src='http://img0.bdstatic.com/img/image/shouye/touxiang1127.jpg'" onmouseout="this.src='http://img0.bdstatic.com/img/image/shouye/sheying1127.jpg'">
+</body>
+</html>

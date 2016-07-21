@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#tab1{margin: 20px auto; text-align: center;border-collapse: collapse;color: #666}
+	#tab1 thead,#tab1 td{padding: 4px 8px;border:1px solid #ccc;}
+	#tab1 thead{background-color:#20C845}
+	</style>
+	<script type="text/javascript">
+	/*window.onload=function()
+	{
+		var oTab=document.getElementById("tab1");
+		var oldBgColor="";
+        var i=0;
+
+        for(i=0;i<oTab.tBodies[0].rows.length;i++)
+        {
+        	oTab.tBodies[0].rows[i].style.background=i%2?'#ccc':'';
+        	oTab.tBodies[0].rows[i].onmouseover=function()
+        	{
+        		oldBgColor=this.style.background
+        		this.style.background='yellow';
+        	};
+        	oTab.tBodies[0].rows[i].onmouseout=function()
+        	{
+        		this.style.background=oldBgColor;
+        	};
+        }
+	}*/
+	window.onload=function()
+	{
+		var oTab=document.getElementById("tab1");
+		var oBtn=document.getElementById("btn1");
+		var oTxt=document.getElementById("txt1");
+
+		oBtn.onclick=function()
+		{
+			var oTr=document.createElement("tr");
+			var oTd=null;
+
+			oTd=document.createElement("td");
+			oTd.innerHTML=oTab.tBodies[0].rows.length+1;
+			oTr.appendChild(oTd);
+
+			oTd=document.createElement("td");
+			oTd.innerHTML=oTxt.value;
+			oTr.appendChild(oTd);
+
+			oTd=document.createElement("td");
+			oTd.innerHTML="&nbsp";
+			oTr.appendChild(oTd);
+
+			oTab.tBodies[0].appendChild(oTr);
+		};
+
+	};
+	</script>
+</head>
+<body>
+<input id="txt1" type="text" />
+<button id="btn1">添加</button>
+	<table id="tab1" border="1" width="70%">
+		<thead>
+		    <td>ID</td>
+			<td>姓名</td>
+			<td>操作</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>唐勋保</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>刘卓豪</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>罗宏</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>波波</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

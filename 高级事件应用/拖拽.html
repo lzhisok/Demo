@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+#div1{width: 100px;height: 100px;background-color: red;position: absolute;}
+#div2{width: 100px;height: 100px;background-color: yellow;position: absolute;}
+#div3{width: 100px;height: 100px;background-color: green;position: absolute;}
+</style>
+<script type="text/javascript">
+window.onload=function()
+{
+	drag("div1");
+	drag("div2");
+	drag("div3");
+}
+
+function drag(id)
+{
+	var oDiv=document.getElementById(id);
+
+	oDiv.onmousedown=function(ev)
+	{
+		var oEvent=ev||event;
+		var disX=oEvent.clientX-oDiv.offsetLeft;
+		var disY=oEvent.clientY-oDiv.offsetTop;
+
+		document.onmousemove=function(ev)
+		{
+			var oEvent=ev||event;
+			var l=oEvent.clientX-disX;
+			var t=oEvent.clientY-disY;
+			if(l<50)
+			{
+				l=0;
+			}
+			else if(l>document.documentElement.clientWidth-oDiv.offsetWidth-50)
+			{
+                l=document.documentElement.clientWidth-oDiv.offsetWidth;
+			}
+
+			if(t<50)
+			{
+				t=0;
+			}
+			else if(t>document.documentElement.clientHeight-oDiv.offsetHeight-50)
+			{
+                t=document.documentElement.clientHeight-oDiv.offsetHeight;
+			}
+			oDiv.style.left=l+"px";
+			oDiv.style.top=t+"px";
+		};
+
+		document.onmouseup=function()
+		{
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+
+		return false;
+	};
+}
+</script>
+</head>
+<body>
+djsndjsd
+<div id="div1">dsdsd</div>
+<div id="div2"></div>
+<div id="div3"></div>	
+
+</body>
+</html>

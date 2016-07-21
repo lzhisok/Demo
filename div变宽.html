@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div{width:30px;height:50px;background:yellow;margin-top:320px; float:left; margin-left:20px;}
+</style>
+<script>
+window.onload=function()
+{
+	var aDiv=document.getElementsByTagName("div");
+	var i=0;
+	
+	for(i=0;i<aDiv.length;i++)
+	{
+		aDiv[i].timer=null;
+		aDiv[i].onmouseover=function()
+		{
+			startMove(this,500);
+		}
+		aDiv[i].onmouseout=function()
+		{
+			startMove(this,100);
+		}
+	}
+}
+
+function startMove(obj,iTarget)
+{
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+		var iSpeed=(iTarget-obj.offsetHeight)/5;
+	    iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+		
+		if(obj.offsetHeight==iTarget)
+		{
+			clearInterval(obj.timer);
+		}
+		else
+		{
+			obj.style.height=obj.offsetHeight+iSpeed+"px";
+		}
+		},30)
+}
+</script>
+</head>
+
+<body>
+<div></div><div style="background-color:red"></div>
+
+<div style="background-color:blue"></div>
+<div style="background-color:#30212"></div>
+<div style="background-color:#550055"></div>
+<div style="background-color:#c812c8"></div>
+<div style="background-color:#09f116"></div>
+<div style="background-color:#30212"></div>
+<div style="background-color:#09f116"></div>
+<div style="background-color:#30212"></div>
+<div style="background-color:#c812c8"></div>
+<div style="background-color:#30212"></div>
+<div style="background-color:#550055"></div>
+<div style="background-color:#09f116"></div>
+<div style="background-color:#c812c8"></div>
+<div style="background-color:#550055"></div>
+</body>
+</html>

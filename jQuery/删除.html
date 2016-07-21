@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			$("#div1").remove();
+			// $("#div1").empty();
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="div1" style="height:200px;width:200px;background:blue;border:1px solid black;">
+		hello
+		<p>hello wrold</p>
+		<p>hello</p>
+	</div>
+	<button id="btn1">删除</button>
+</body>
+</html>

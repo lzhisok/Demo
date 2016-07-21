@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript">
+window.onload=function()
+{
+	var oBtn=document.getELementById("btn1");
+
+	oBtn.onclick=function()
+	{
+		//1、创建ajax对象
+		//var oAjax=new XMLHttpRequest();
+		var oAjax = null;
+		if (window.XMLHttpRequest) {
+			oAjax=new XMLHttpRequest;
+		}
+		else
+		{
+		oAjax=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		//2、连接服务器
+		//open(方法，url，是否异步)
+		oAjax.open("GET","abc.txt",true);
+
+		//发送请求
+		oAjax.send();
+		//4、接收返回
+		oAjax.onreadystatechange=function()
+		{
+			if(oAjax.readyState==4)
+			{
+				if(oAjax.status==200)
+				{
+					
+				}
+			}
+		}
+
+	}
+
+}
+</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="读取文件" />
+</body>
+</html>

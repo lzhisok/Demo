@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+	#ul1{background: red;}
+	#ul2{background: yellow;}
+</style>
+<script type="text/javascript">
+	window.onload=function()
+	{
+		var oBtn=document.getElementById("btn1");
+		var oUl=document.getElementById("ul1");
+        oBtn.onclick=function()
+        {
+        	var aLi=oUl.getElementsByTagName("li");
+        	//aLi.sort();
+        	var arr=[];
+        	var i=0;
+            //转成数组
+        	for(i=0;i<aLi.length;i++)
+        	{
+        		arr[i]=aLi[i];
+        	}
+        	//数组排序
+        	arr.sort(function(li1,li2){
+        		return parseInt(li1.innerHTML)-parseInt(li2.innerHTML);
+        	});
+        	//重新输入
+        	for(i=0;i<arr.length;i++)
+        	{
+        		oUl.appendChild(arr[i]);
+        	}
+        };
+
+	};
+</script>
+</head>
+<body>
+    <button id="btn1">移动Li</button>
+	<ul id="ul1">
+		<li>32</li>
+		<li>12</li>
+		<li>87</li>
+		<li>9</li>
+		<li>18</li>
+		<li>6</li>
+	</ul>
+	<ul id="ul2"></ul>
+</body>
+</html>

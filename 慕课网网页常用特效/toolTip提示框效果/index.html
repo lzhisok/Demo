@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ToolTip效果</title>
+    <style>
+        body {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: "Microsoft YaHei", "微软雅黑";
+        }
+
+        #demo {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px 30px;
+            position: relative;
+            background-color: #fff;
+        }
+
+        #demo h2 {
+            color: #03F;
+        }
+
+        #demo .tooltip {
+            color: #03F;
+            cursor: help;
+        }
+        .tooltip-box{
+            display:block;
+            background-color:#fff;
+            border-radius:5px;
+            line-height:1.6;
+            border:1px solid #66ccff;
+            color:#333;
+            padding:20px;
+            font-size:12px;
+            overflow:auto;
+        }
+      
+    </style>
+</head>
+
+<body>
+<div id="demo">
+    <p><a class="tooltip" id="tooltip1">慕课网</a>的使命是传播互联网最前沿技术，帮助更多的人实现梦想！在慕课网前端开发、
+        <a class="tooltip" id="tooltip2">Android</a>开发、<a class="tooltip" id="tooltip3">iOS</a>开发等课程统统有，你还在等什么，赶紧来学习吧。
+    </p>
+</div>
+<script type="text/javascript">
+var className="tooltip-box";
+var isIE=navigator.userAgent.indexOf("MSIE") > -1;
+var getId=function(id){
+    return document.getElementById(id);
+}
+function showToolTip(obj,id,html,width,height){
+    if(getId(id)==null){
+        var toolTipBox=document.createElement("div");
+        toolTipBox.id=id;
+        toolTipBox.className=className;
+        toolTipBox.innerHTML=html;
+
+        obj.appendChild(toolTipBox);
+
+
+        toolTipBox.style.width=width ? width + "px" : "auto";
+        toolTipBox.style.height=height ? height + "px" : "auto";
+
+        if(!width && isIE){
+            toolTipBox.style.width=toolTipBox.offsetWidth;
+        }
+
+        toolTipBox.style.display="block";
+        toolTipBox.style.position="absolute";
+        
+        var left=obj.offsetLeft;
+        var top=obj.offsetTop+20;
+
+        if(left + toolTipBox.offsetWidth > document.body.clientWidth){
+            var demoLeft=getId("demo").offsetLeft;
+            left=document.body.clientWidth-toolTipBox.offsetWidth - demoLeft;
+            if(left<0){
+                left = 0;
+            }
+        }
+
+        toolTipBox.style.left=left+"px";
+        toolTipBox.style.top=top+"px";
+
+        obj.onmouseleave=function(){
+            setTimeout(function(){
+                toolTipBox.style.display="none";
+            },100)
+        }
+    }
+    else{
+        getId(id).style.display="block";
+    }
+
+}
+var t1=getId("tooltip1");
+var t2=getId("tooltip2");
+var t3=getId("tooltip3");
+t1.onmouseenter=function(){
+    showToolTip(this,"t1","慕课网欢迎你！",200)
+}
+t2.onmouseenter=function(){
+    showToolTip(this,"t2","来慕课网学习安卓开发！",200)
+}
+t3.onmouseenter=function(){
+    showToolTip(this,"t3","来慕课网学习真的好愉快！",200)
+}
+
+</script>
+</body>
+</html>

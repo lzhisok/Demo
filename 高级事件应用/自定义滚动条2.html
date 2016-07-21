@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+#Parent{width: 400px;height: 20px;background-color: red;position: relative;margin: 20px auto;}
+#div1{width: 20px;height: 20px;background-color: #ccc;position: absolute;cursor: pointer;}
+#div2{width: 200px;height: 300px;position: relative;border: 1px solid black;overflow: hidden;}
+#div3{position: absolute;}
+</style>
+<script type="text/javascript">
+window.onload=function()
+{
+	var oParent=document.getElementById("Parent");
+	var oDiv=document.getElementById("div1");
+	var oDiv2=document.getElementById("div2");
+	var oDiv3=document.getElementById("div3");
+
+	oDiv.onmousedown=function(ev)
+	{
+	   var oEvent=ev||event;
+	   var disX=oEvent.clientX-oDiv.offsetLeft;
+
+	   document.onmousemove=function(ev)
+	   {
+	   	  var oEvent=ev||event;
+	   	  var l=oEvent.clientX-disX;
+	   	  if(l<0)
+	   	  {
+	   	  	l=0;
+	   	  }
+	   	  else if(l>oParent.offsetWidth-oDiv.offsetWidth)
+	   	  {
+	   	  	l=oParent.offsetWidth-oDiv.offsetWidth;
+	   	  }
+	   	  oDiv.style.left=l+"px";
+	   	  var scale=l/(oParent.offsetWidth-oDiv.offsetWidth);
+	   	  oDiv3.style.top=-(oDiv3.offsetHeight-oDiv2.offsetHeight)*scale+"px";
+	   };
+	   document.onmouseup=function()
+	   {
+	   	  document.onmousemove=null;
+	   	  document.onmouseup=null;
+	   }
+	};
+}
+</script>
+</head>
+<body>
+<div id="Parent">
+	<div id="div1"></div>
+</div>
+<div id="div2">
+    <div id="div3">
+    	原标题：已婚男单恋女同事在水中下“爱情魔药”：药水竟有毒
+　　中新网1月20日电  据外媒20日报道，为了让女讲师爱上自己，新加坡已婚中年男子上网买了两瓶“爱情魔药”，然后加入她喝的水中，结果“魔药”却是“毒药”，所幸女讲师没有生命危险，男子面控后被罚1500元。
+
+　　被告黄福祥(译音，43岁)19日承认一项行为疏忽危害他人生命控状，法官判他最高罚款1500元。
+
+　　黄福祥案发时在义安理工学院担任技术员，与女讲师是同事。他案发后已离职。
+
+　　案件发生在校园内，案情显示，2014年11月，女讲师喝了一瓶放在桌子上的水后觉得很苦，立刻把水吐出来。另一次，她喝了一口，同样觉得苦，决定不喝瓶里的水。事后，女讲师感觉喉咙干燥，思路不清，晚上失眠。由于接连几次喝的水都有苦味，她心中起疑，决定查个究竟。
+
+　　去年1月12日下午5时30分，女讲师把设置录像功能的手机摆在桌面上。晚上8时，她回到座位检查手机录下的画面，发现黄福祥在她喝的水里下药。女讲师隔天报警。
+
+　　“爱情魔药”含毒药成分
+
+　　黄福祥向警方承认下药，他以为那两瓶液体是“爱情魔药”，能让女讲师喝下后爱上他。“爱情魔药”是他花了200美元上网购买的。
+
+　　根据卫生科学局的化验结果，黄福祥掺在水里的“爱情魔药”含有甲苯噻嗪(Xyalzine)和氟哌啶醇(haloperidol)成分。它们在毒药法令下被列为毒药。
+
+　　甲苯噻嗪有镇静、镇痛和松弛肌肉作用，它是兽医使用的药物，不能用在人类身上。甲苯噻嗪产生的副作用包括失去方向感、晕沉、倦怠、血压低及心搏徐缓等。氟哌啶醇则是抗精神病药物，会导致失眠、精神病症、焦虑及运动机能亢奋等副作用。
+
+　　女讲师无大碍
+
+　　控方表示女讲师无大碍，促请法官判处最高罚款。
+
+　　律师为黄福祥求情说，黄福祥从小患情绪障碍症，他自尊心低，想引起人们的注意。黄福祥很喜欢女讲师，为引起女讲师的注意，他下“爱情魔药”。他思想不成熟，以为“爱情魔药”能帮助他，让女讲师爱上他。
+
+　　律师说，黄福祥是没性欲的人(asexual)，他只是想在女讲师身上寻找感情寄托。律师也说，黄福祥曾是基层领袖，也是建国一代大使。他对自己的愚蠢行为深感后悔，也因这起事件失去工作，目前无业，希望法官从轻发落。
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1{width:20px;height:100px;background:yellow; position:absolute; right:0px}
+</style>
+<script>
+window.onscroll=function()
+{
+	var oDiv=document.getElementById("div1");
+	
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	//var scrollTop=document.body.scrollTop;
+	var t=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2;
+	
+	startMove(parseInt(t));
+}
+var timer=null;
+function startMove(iTarget)
+{
+	var oDiv=document.getElementById("div1");
+	
+	clearInterval(timer);
+	timer=setInterval(function(){
+		var iSpeed=(iTarget-oDiv.offsetTop)/8;
+		iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+		
+		if(oDiv.offsetTop==iTarget)
+		{
+			clearInterval(timer);
+			
+		}
+		else
+		{
+			oDiv.style.top=oDiv.offsetTop+iSpeed+"px";
+			
+		}
+		},30)
+	
+	
+}
+</script>
+</head>
+
+<body style="height:1000px">
+<div id="div1"></div>
+</body>
+</html>

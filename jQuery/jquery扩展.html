@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+    var jq = $.noConflict();
+    jq(document).ready(function(){
+    	jq("#btn").on("click",function(){
+    		jq("div").text("new hello");
+    	})
+    })
+	</script>
+	<style type="text/css"></style>
+</head>
+<body>
+	<div>hello</div>
+	<button id="btn">按钮</button>
+</body>
+</html>

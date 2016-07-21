@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    		.table {/*margin: 20px auto;*/ border-collapse: collapse; font-size: 15px; text-align: center; color: #666;}
+			.table th, .table td {padding: 4px 8px; border: 1px solid #ccc;}
+			.table th {background-color: #f0f0f0;}
+        </style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    </head>
+</head>
+<body>
+<center>
+    <table class="table" width="80%" id="stutable">
+    	<caption><h2>K203寝室资料</h2></caption>
+    	<thead>
+    	<tr>
+    		<th>学号</th>
+    		<th>姓名</th>
+    		<th>性别</th>
+    		<th>年龄</th>
+    		<th>系别</th>
+    		<th>成绩</th>
+    	</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td colspan="6">
+    				<button id="btn1">加载</button>
+    			</td>
+    		</tr>
+    	</tbody>
+    </table>
+    </center>
+	<script type="text/javascript">
+	var student=[
+	   {"no":"01","name":"刘卓豪","sex":"男","age":"20","xb":"计算机系","grade":"100"},
+	   {"no":"02","name":"罗宏","sex":"男","age":"20","xb":"计算机系","grade":"99"},
+	   {"no":"03","name":"波波","sex":"男","age":"20","xb":"计算机系","grade":"90"},
+	   {"no":"04","name":"唐逗比","sex":"男","age":"20","xb":"计算机系","grade":"60"},
+	   {"no":"05","name":"有缘人","sex":"女","age":"18","xb":"计算机系","grade":"99"},
+	];
+    $(function(){
+    	$("#btn1").bind("click",function(){
+    		 var tb=$(".table").find("tbody");
+    		 tb.empty();
+    	// });
+    	$.each(student,function(index,el){
+    		var tb=$(".table").find("tbody");
+    		tb.append(
+    			"<tr><td>"+el.no+"</td><td>"+
+    			           el.name+"</td><td>"+
+    			           el.sex+"</td><td>"+
+    			           el.age+"</td><td>"+
+    			           el.xb+"</td><td>"+
+    			           el.grade+"</td></tr>"
+    			);
+    	})
+
+    	
+    })
+    })
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	ul{width: 70px;overflow: hidden;}
+	ul li{width:70px;height:30px;text-align:center;line-height:30px;display: block;}
+	</style>
+	<script type="text/javascript" src="http://www.imooc.com/data/jquery-1.8.2.min.js"></script>
+	</head>
+<body>
+	<div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	(function($){
+        $.extend({
+        	"liFocus":function(li){
+                li.css("background-color","#ccc");
+        	},
+            "liBlur":function(li){
+                li.css("background-color","#fff");
+            }
+        });
+	})(jQuery);
+	$(function(){
+		$("li").bind("mouseover",function(){
+			$.liFocus($(this));
+		});
+		$("li").bind("mouseout",function(){
+			$.liBlur($(this));
+		})
+	});
+	</script>
+</body>
+</html>

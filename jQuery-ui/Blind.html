@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<style type="text/css">
+	#toggle{
+		width:100px;
+		height:100px;
+		background-color:#ccc;
+	}
+	</style>
+</head>
+<body>
+<div id="toggle"></div>
+<script type="text/javascript">
+	$(document).click(function(){
+		$("#toggle").toggle("blind",{direction:"left"});
+	})
+</script>
+</body>
+</html>

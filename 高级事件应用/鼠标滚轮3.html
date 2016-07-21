@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+#div1{width: 200px;height: 100px;background-color: red}
+</style>
+<script type="text/javascript">
+function myAddEvent(obj,sEvent,fn)
+{
+	if(obj.attachEvent)
+	{
+		obj.attachEvent("on"+sEvent,fn);
+	}
+	else
+	{
+		obj.addEventListener(sEvent, fn, false);
+	}
+
+}
+window.onload=function()
+{
+	var oDiv=document.getElementById("div1");
+    
+
+    function onMouseWheel(ev)
+    {
+    	var oEvent=ev||event;
+    	/*chorme
+    	//下  负数
+    	//上    正数
+    	alert(oEvent.wheelDelta);*/
+    	/*FF
+    	//下 正
+    	//上  负
+    	alert(oEvent.detail);*/
+    	var bDown=true;
+
+    	if(oEvent.wheelDelta)
+    	{
+    		if(oEvent.wheelDelta<0)
+    		{
+    			bDown=true;
+    		}
+    		else
+    		{
+    			bDown=false;
+    		}
+    	}
+    	else
+    	{
+    		if(oEvent.detail>0)
+    		{
+    			bDown=true;
+    		}
+    		else
+    		{
+    			bDown=false;
+    		}
+    	}
+    	alert(bDown);
+    }
+	myAddEvent(oDiv,"mousewheel",onMouseWheel);
+	myAddEvent(oDiv,"DOMMouseScroll",onMouseWheel);
+    //IE Chorme
+	// oDiv.onmousewheel=function()
+	// {
+	// 	alert("a");
+	// }
+	// //FF
+	// oDiv.addEventListener("DOMMouseScroll", function(){
+	// 	alert("a");
+	// }, false)
+}
+</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		alert($("#div").height());//包含里面的元素，不包含内外边距，边框
+		alert($("#div").innerHeight());//包括内边距
+		alert($("#div").outerHeight());
+		alert($("#div").outerHeight(true));//，如果为true，加上外边距
+	})
+	</script>
+	<style type="text/css">
+	   #div{
+	   	width: 100px;
+	   	height: 100px;
+	   	background-color: aquamarine;
+	   	margin: 50px;
+	   	padding: 50px;
+	   	border: 2px solid aqua;
+	   }
+	</style>
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>

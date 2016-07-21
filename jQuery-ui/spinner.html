@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+</head>
+<body>
+<input type="text" id="input">
+<a href="#" id="btn">getValue</a>
+<script type="text/javascript">
+	$(function(){
+		$("#input").spinner();
+		$("#input").spinner("value","10");
+		$("#btn").button().on("click",function(){
+			alert($("#input").spinner("value"));
+		});
+	});
+</script>
+</body>
+</html>

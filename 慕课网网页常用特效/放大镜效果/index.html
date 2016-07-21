@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>放大镜</title>
+<script src="http://libs.baidu.com/jquery/1.10.0/jquery.min.js"></script>
+
+<style type="text/css">
+* {
+margin: 0;
+padding: 0
+}
+
+#demo {
+display: block;
+width: 400px;
+height: 255px;
+margin: 50px;
+position: relative;
+border: 1px solid #ccc;
+}
+
+#small-box {
+position: relative;
+z-index: 1;
+}
+
+#float-box {
+display: none;
+width: 160px;
+height: 120px;
+position: absolute;
+background: #ffffcc;
+border: 1px solid #ccc;
+filter: alpha(opacity=50);
+opacity: 0.5;
+cursor: move;
+}
+
+#mark {
+position: absolute;
+display: block;
+width: 400px;
+height: 255px;
+z-index: 10;
+background: #fff;
+filter: alpha(opacity=0);
+opacity: 0;
+cursor: move;
+}
+
+#big-box {
+display: none;
+position: absolute;
+top: 0;
+left: 460px;
+width: 400px;
+height: 300px;
+overflow: hidden;
+border: 1px solid #ccc;
+z-index: 1;;
+}
+
+#big-box img {
+position: absolute;
+z-index: 5;
+}
+</style>
+<script type="text/javascript">
+    $(function(){
+        $("#mark").mouseover(function(){
+            $("#float-box").css("display","block");
+            $("#big-box").css("display","block");
+        }); 
+
+        $("#mark").mouseout(function(){
+            $("#float-box").css("display","none");
+            $("#big-box").css("display","none");
+        }); 
+
+        $("#mark").mousemove(function(e){
+            var e= e || window.event;
+
+            var left=e.clientX-$("#mark").offset().left-($("#float-box").width())/2;
+            var top=e.clientY-$("#mark").offset().top-($("#float-box").height())/2;
+            var percent=$("#big-box").width()/$("#float-box").width();
+
+            if(left<0){
+                left=0;
+            }
+            else if(left>$("#mark").width()-$("#float-box").width()){
+                left=$("#mark").width()-$("#float-box").width();
+            }
+
+            if(top<0){
+                top=0;
+            }
+            else if(top>$("#mark").height()-$("#float-box").height()){
+                top=$("#mark").height()-$("#float-box").height();
+            }
+
+            $("#float-box").css({"left":left,"top":top});
+            $("#big-box>img").css({"left":-percent*left,"top":-percent*top});
+
+        });
+    })
+</script>
+
+
+</head>
+<body>
+<div id="demo">
+    <div id="small-box">
+        <div id="mark"></div>
+        <div id="float-box"></div>
+        <img src="http://img.mukewang.com/537d77fb0001559d04000255.jpg"/>
+    </div>
+
+    <div id="big-box">
+        <img src="http://img.mukewang.com/537d781b0001c04210240654.jpg"/>
+    </div>
+</div>
+</body>
+</html>

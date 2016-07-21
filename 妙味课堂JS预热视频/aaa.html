@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+#div1{ width:200px; height:200px; background:#A74B4C; position:absolute; top:300px;}
+</style>
+<script>
+        var timer = null
+        window.onload = function() {
+            var odiv = document.getElementById('div1');
+            var obt = document.getElementById('bt');
+            obt.onclick = function() {
+                move(odiv,250);
+            }
+        }
+
+        function move(obj,pos) {
+            clearInterval(timer);
+            var obj = document.getElementById('div1');
+            var speed = (pos - obj.offsetLeft) / 10
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            if (obj.offsetLeft != pos) {
+                obj.style.left = obj.offsetLeft + speed + 'px'
+            } else {
+                clearInterval(timer);
+            }
+            timer = setInterval(move(obj,pos), 30)
+        }
+
+/*        function move(obj,pos) {
+            clearInterval(timer);
+            var obj = document.getElementById('div1');
+            if (Math.abs(pos - obj.offsetLeft) <= 10) {
+                clearInterval(timer);
+                obj.style.left = pos + 'px';
+            } else {
+                obj.style.left = obj.offsetLeft + 10 + 'px'
+            }
+        }*/
+</script>
+</head>
+
+<body>
+<div id='div1'></div>
+<input type="button" id="bt" value="按钮">
+</body>
+<ml>

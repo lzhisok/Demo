@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<p id="ptime"></p>
+<script>
+    var mytime = setInterval(function(){
+	    getTime();
+	},1000);
+	function getTime(){
+	   var d= new Date();
+	   var t=d.toLocaleTimeString();
+	   document.getElementById("ptime").innerHTML=t;
+	}
+</script>
+</body>
+</html>

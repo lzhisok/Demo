@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#flipshow").click(function(){
+			$("#content").slideDown(1000);
+		});
+		$("#fliphide").click(function(){
+			$("#content").slideUp(1000);
+		});
+		$("#fliptoggle").click(function(){
+			$("#content").slideToggle(1000);
+		});
+	});
+	
+	</script>
+	<style type="text/css">
+	#content,#flipshow,#fliphide,#fliptoggle{
+		padding: 5px;
+		text-align: center;
+		background-color: #ece023;
+		border: 1px #ece999 solid;
+	}
+	#content{
+		padding: 50px;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="flipshow">点击</div>
+	<div id="fliphide">隐藏</div>
+	<div id="fliptoggle">点击/隐藏</div>
+	<div id="content">Hello World</div>
+</body>
+</html>

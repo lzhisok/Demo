@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript">
+function Person(name,sex)
+{
+	this.name=name;
+	this.sex=sex;
+}
+
+Person.prototype.showName=function()
+{
+	alert(this.name);
+}
+
+Person.prototype.showSex=function()
+{
+	alert(this.sex);
+}
+//----------------------
+function Worker(name,sex,job)
+{
+	//构造函数伪装    调用父级的构造函数--为了继承属性
+	Person.call(this,name,sex);
+	this.job=job;
+}
+//原型链    通过原型来继承父级的方法
+//Worker.prototype=Person.prototype;
+for(var i in Person.prototype)
+{
+	Worker.prototype[i]=Person.prototype[i];
+}
+Worker.prototype.showJob=function()
+{
+	alert(this.job);
+};
+var oP=new Person('blue','男');
+var oW=new Worker("lue","男","打杂的");
+oP.showName();
+oP.showSex();
+
+oW.showName();
+oW.showSex();
+oW.showJob();
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>

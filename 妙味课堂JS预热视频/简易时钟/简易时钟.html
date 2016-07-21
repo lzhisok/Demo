@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	function toDouble(num)
+	{
+		if(num<10)
+		{
+			return '0'+num;
+		}
+		else
+		{
+			return ''+num;
+		}
+	}
+	window.onload=function()
+	{
+		var oBtn=document.getElementById("btn1");
+		var aImg=document.getElementsByTagName('img');
+		var i=0;
+		function updateTime()
+		{
+			var oDate=new Date();
+			var str=toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());
+			//alert(str)
+			for(i=0;i<aImg.length;i++)
+			{
+				aImg[i].src='img/'+str.charAt(i)+'.png'
+			}
+		}
+
+		//oBtn.onclick=updateTime;
+        setInterval(updateTime,1000)
+        updateTime();
+	}
+	</script>
+</head>
+<body style="color:#ffff00;background:#990099;font-size:50px;">
+    <button id="btn1">更新时间</button>
+	<div>
+		<img src="img/0.png">
+		<img src="img/0.png">
+		时
+		<img src="img/0.png">
+		<img src="img/0.png">
+		分
+		<img src="img/0.png">
+		<img src="img/0.png">
+		秒
+	</div>
+</body>
+</html>

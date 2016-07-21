@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(function(){
+   	$("a").click(function(){
+   		if($('a').text()=="更多")
+   		{
+   			$("a").html("简化");
+   			$(".li").show();
+   		}
+   		else
+   		{
+   			$("a").html("更多");
+   			$(".li").hide();
+   		}
+   	})
+   })
+   
+</script>
+</head>
+
+<body>
+<ul>
+	<li class="li" style="display:none">11</li>
+	<li class="li" style="display:none">22</li>
+	<li>33</li>
+	<li>44</li>
+	<li>55</li>
+	<li>66</li>
+	<li>77</li>
+</ul>
+<a href="javascript:;">更多</a>
+</body>
+</html>

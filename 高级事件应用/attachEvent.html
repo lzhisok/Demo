@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript">
+function aaa()
+{
+	alert("a");
+}
+function bbb()
+{
+	alert("b");
+}
+
+function myAddEvent(obj,sEvent,fn)
+{
+	if(obj.attachEvent)
+	{
+		obj.attachEvent("on"+sEvent,fn);
+	}
+	else{
+		obj.addEventListener(sEvent,fn,false);
+	}
+}
+window.onload=function()
+{
+    var oBtn=document.getElementById("btn1");
+    
+    myAddEvent(oBtn,"click",aaa);
+    myAddEvent(oBtn,"click",bbb);
+    /*oBtn.addEventListener("click", aaa, false);
+    oBtn.addEventListener("click", bbb, false);*/
+}
+</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="submit">
+</body>
+</html>

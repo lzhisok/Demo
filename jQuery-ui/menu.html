@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<style type="text/css">
+	/*#menu{width:200px;}*/
+	.ui-menu:after{
+        content:".";
+        display:block;
+        clear:both;
+        visibility:hidden;
+        line-height:0;
+        height:0;
+	}
+	.ui-menu .ui-menu-item{
+		display:inline-block;
+		float:left;
+		margin:0;
+		padding:10px;
+		width:auto;
+	}
+	</style>
+</head>
+<body>
+<ul id="menu">
+	<li>
+		<a href="#">java</a>
+		<ul>
+			<li><a href="#">java  EE</a></li>
+			<li><a href="#">java  SE</a></li>
+			<li><a href="#">java  ME</a></li>
+		</ul>
+	</li>
+	<li>C++</li>
+	<li>PHP</li>
+	<li>HTML</li>
+</ul>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#menu").menu({position:{at:"left bottom"}});
+	})
+</script>
+</body>
+</html>

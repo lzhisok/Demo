@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>挑战题</title>
+<style>
+    .no{display:none;}
+</style>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li class="no">55</li>
+        <li class="no">66</li>
+        <li>77</li>
+    </ul>
+    <a href="#" id="aaa">更多</a>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $("#aaa").click(function(){
+                var text = $("#aaa").text();
+                if(text == "更多"){
+                    $("#aaa").html("简化");
+                    $("li[class=no]").show();
+                }else{
+                    $("#aaa").html("更多");
+                    $("li[class=no]").hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

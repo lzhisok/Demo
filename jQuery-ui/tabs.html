@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+</head>
+<body>
+<div id="tabs">
+	<ul>
+		<li><a href="#hello1">hello</a></li>
+		<li><a href="#hello2">hello</a></li>
+		<li><a href="#hello3">hello</a></li>
+	</ul>
+	<div id="hello1">
+		hello1
+		hello
+		hello
+		hello
+	</div>
+	<div id="hello2">
+		hello2
+		hello
+		hello
+		hello
+	</div>
+	<div id="hello3">
+		hello3
+		hello
+		hello
+		hello
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$("#tabs").tabs();
+	})
+</script>
+</body>
+</html>

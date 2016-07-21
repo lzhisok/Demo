@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;font-size: 14px;}
+	ul{list-style: none;}
+	li{float:left;margin-top: 20px}
+	a{text-decoration: none;display: block;height: 30px;line-height: 30px;width: 100px;background-color: #ccc;margin-bottom: 1px;text-align: center;}
+	a.on, a:hover{background-color:#f60;color:#fff;height: 40px;line-height: 40px;margin-top: -10px;}
+
+	</style>
+	<script type="text/javascript">
+	window.onload=function()
+	{
+		var aA=document.getElementsByTagName("a");
+		for(var i=0;i<aA.length;i++){
+			aA[i].onmouseover=function(){
+				var This=this;
+				setInterval(function(){
+					This.style.width=This.offsetWidth+8+"px";
+
+				},3000)
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li><a class="on" href="#">首页</a></li>
+		<li><a href="#">新闻快讯</a></li>
+		<li><a href="#">产品展示</a></li>
+		<li><a href="#">售后服务</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+</body>
+</html>

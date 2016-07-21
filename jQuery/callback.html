@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			/*$("p").hide(1000,function(){
+				alert("动画结束，这个方法被回调")
+			});*/
+		$("p").css("color","red").slideUp(1000).slideDown(1000);
+		});
+	});
+	</script>
+</head>
+<body>
+    <button>隐藏</button>
+	<p>hello worldhello worldhello world</p>
+</body>
+</html>
